@@ -17,7 +17,7 @@ It works on iOS, Android, Tizen, Windows Phone and Store Apps, OS X, Windows, Li
 
 ![](docs/framework_architecture.jpg "")
 
-cocos2d-x is:
+cocos2d-x is better because:
 
   * Fast
   * Free
