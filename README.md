@@ -24,7 +24,7 @@ cocos2d-x is better because:
   * Easy to use
   * Community supported
 
-Git user attention
+Git user attention!
 -----------------------
 
 1. Clone the repo from GitHub.
