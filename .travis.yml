@@ -1,1 +1,10 @@
-language : c++
+language: cpp
+env:
+        matrix:
+                -GEN_JSB=YES
+                -PLATFORM=linux DEBUG=1
+                -PLATFORM=android
+        script:
+                - tools/travis-scripts/run-script.sh
+                  before_install:
+                          - tools/travis-scripts/before-install.sh
