@@ -1,10 +1,38 @@
-language: cpp
-env:
-        matrix:
-                -GEN_JSB=YES
-                -PLATFORM=linux DEBUG=1
-                -PLATFORM=android
-        script:
-                - tools/travis-scripts/run-script.sh
-                  before_install:
-                          - tools/travis-scripts/before-install.sh
+language:
+        -cpp
+        -pyhton
+python:
+        -"2.7"
+compiler:
+        -gcc
+
+## Solved glfw not found problem.
+
+dist: trusty
+
+sudo: required
+
+script:
+        - git clone http://github.com/blazekyo/cocos2d-x.git
+        - cd cocos2d-x
+        - yes | python download-deps.py
+        - git submodule update --init
+        - yes | python setup.py
+        - cd tools/travis-scripts
+        - yes | ./install_glfw.sh
+        - cd .
+        - cd build
+        - ./install-deps-linux.sh
+        - cmake ..
+        - make
+
+
+
+     
+
+                
+                
+        
+               
+                 
+
